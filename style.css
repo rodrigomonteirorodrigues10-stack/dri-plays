@@ -1,0 +1,382 @@
+
+/* CORES DO SITE */
+:root {
+    --fundo: #080910;
+    --painel: #11131f;
+    --azul: #00d9ff;
+    --roxo: #8b5cf6;
+    --branco: #f5f7ff;
+    --cinza: #999fb5;
+    --borda: #25283a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--fundo);
+    color: var(--branco);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* MENU */
+.topo {
+    min-height: 76px;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    border-bottom: 1px solid var(--borda);
+    background: #080910;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--azul);
+}
+
+.topo nav {
+    display: flex;
+    gap: 28px;
+}
+
+.topo nav a,
+.rodape > a:last-child {
+    color: var(--cinza);
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.topo nav a:hover,
+.rodape > a:last-child:hover {
+    color: var(--azul);
+}
+
+.btn-topo {
+    padding: 10px 16px;
+    border: 1px solid var(--azul);
+    border-radius: 5px;
+    color: var(--azul);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* INÍCIO */
+.hero {
+    min-height: 600px;
+    padding: 90px 9%;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 55px;
+    background:
+        radial-gradient(
+            ellipse at 80% 30%,
+            #192047 0%,
+            transparent 50%
+        ),
+        var(--fundo);
+}
+
+.tag {
+    color: var(--azul);
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 5vw, 64px);
+    font-weight: 900;
+    line-height: 1.08;
+    letter-spacing: -2px;
+}
+
+.hero h1 span,
+.secao h2 span,
+.sobre h2 span {
+    color: var(--azul);
+}
+
+.hero-texto {
+    max-width: 500px;
+    margin: 24px 0;
+    color: var(--cinza);
+    font-size: 16px;
+}
+
+.btn-principal {
+    display: inline-block;
+    padding: 14px 22px;
+    border-radius: 5px;
+    background: var(--azul);
+    color: #070910;
+    font-size: 12px;
+    font-weight: 900;
+    transition: 0.25s;
+}
+
+.btn-principal:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 25px #00d9ff45;
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-top: 30px;
+    color: var(--cinza);
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.bolinha {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #46f59a;
+    box-shadow: 0 0 10px #46f59a;
+}
+
+/* CARTÃO DO JOGO */
+.hero-card {
+    padding: 16px;
+    border: 1px solid #34334e;
+    border-radius: 12px;
+    background: #10111d;
+    box-shadow: 0 0 60px #5b21b620;
+    transform: rotate(1deg);
+}
+
+.card-linha,
+.card-rodape {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    color: var(--cinza);
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+.game-art {
+    min-height: 300px;
+    margin: 15px 0;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+    border-radius: 7px;
+    background:
+        linear-gradient(
+            0deg,
+            #080910 0%,
+            #11152ddd 48%,
+            #251c49aa 100%
+        );
+    border: 1px solid #37345b;
+}
+
+.game-label {
+    color: var(--azul);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.game-art h2 {
+    margin-top: 8px;
+    font-size: clamp(30px, 4vw, 42px);
+    line-height: 1.1;
+    font-weight: 900;
+}
+
+.game-art p {
+    margin-top: 12px;
+    color: var(--cinza);
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+/* SEÇÕES */
+.secao {
+    padding: 90px 9%;
+    border-top: 1px solid var(--borda);
+}
+
+.secao h2,
+.sobre h2 {
+    font-size: clamp(30px, 4vw, 44px);
+    line-height: 1.15;
+}
+
+.subtitulo {
+    margin-top: 12px;
+    color: var(--cinza);
+}
+
+.secao-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+    margin-bottom: 35px;
+}
+
+.contador {
+    color: var(--cinza);
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+/* GALERIA DE CLIPS */
+.clips-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.clip {
+    overflow: hidden;
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+    background: var(--painel);
+    transition: 0.25s;
+}
+
+.clip:hover {
+    border-color: var(--roxo);
+    transform: translateY(-4px);
+}
+
+.video-container {
+    background: #03040a;
+    aspect-ratio: 16 / 9;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+}
+
+.clip-info {
+    padding: 22px;
+}
+
+.clip-tipo {
+    color: var(--azul);
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.clip-info h3 {
+    margin: 8px 0;
+    font-size: 20px;
+}
+
+.clip-info p {
+    color: var(--cinza);
+    font-size: 14px;
+}
+
+/* SOBRE */
+.sobre {
+    padding: 100px 20px;
+    text-align: center;
+    background:
+        radial-gradient(
+            ellipse at center,
+            #1a1740 0%,
+            var(--fundo) 68%
+        );
+    border-top: 1px solid var(--borda);
+}
+
+.sobre > p:not(.tag) {
+    max-width: 560px;
+    margin: 22px auto 28px;
+    color: var(--cinza);
+}
+
+/* RODAPÉ */
+.rodape {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 28px 7%;
+    border-top: 1px solid var(--borda);
+}
+
+.rodape p {
+    color: var(--cinza);
+    font-size: 11px;
+    text-align: center;
+}
+
+/* CELULARES */
+@media (max-width: 800px) {
+    .topo {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .topo nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 70px 7%;
+        gap: 40px;
+    }
+
+    .hero-card {
+        transform: none;
+    }
+
+    .secao {
+        padding: 65px 7%;
+    }
+
+    .secao-topo {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .clips-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .rodape {
+        flex-direction: column;
+        text-align: center;
+    }
